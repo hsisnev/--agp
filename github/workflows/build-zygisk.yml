@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Extract source and install the Android SDK components
         shell: bash
@@ -60,7 +60,7 @@ jobs:
             --readelf "$ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-readelf" \
             --out "$output_dir/破-AGP_v1.7.6_Zygisk.zip"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: poagp-v1.7.6-zygisk
           path: output/*
